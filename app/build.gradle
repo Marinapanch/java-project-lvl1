@@ -19,6 +19,10 @@ repositories {
     mavenCentral()
 }
 
+compileJava {
+    options.release = 17
+}
+
 dependencies {
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.0.1-jre'
@@ -36,5 +40,5 @@ testing {
 
 application {
     // Define the main class for the application.
-    mainClass = 'app.App'
+    mainClass = 'hexlet.code.App'
 }
