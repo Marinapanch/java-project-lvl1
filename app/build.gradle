@@ -28,6 +28,10 @@ dependencies {
     implementation 'com.google.guava:guava:31.0.1-jre'
 }
 
+run {
+    standardInput = System.in
+}
+
 testing {
     suites {
         // Configure the built-in test suite
