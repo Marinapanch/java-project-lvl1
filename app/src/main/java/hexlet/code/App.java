@@ -1,5 +1,7 @@
 package hexlet.code;
 
+import hexlet.code.games.Even;
+
 import java.util.Scanner;
 
 import static hexlet.code.Cli.makeGreeting;
@@ -10,6 +12,7 @@ public class App {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
+        System.out.println("3 - Calc");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
@@ -22,9 +25,8 @@ public class App {
                 makeGreeting();
                 break;
             case 2 :
-                var name = makeGreetingWithName();
-                Games game = new Games();
-                game.even(name);
+            case 3 :
+                hexlet.code.Engine.engineGame(index);
                 break;
             case 0 :
                 break;
