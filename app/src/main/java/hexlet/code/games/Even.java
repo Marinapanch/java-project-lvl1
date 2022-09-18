@@ -1,16 +1,22 @@
 package hexlet.code.games;
 
-import java.util.Objects;
-import java.util.Scanner;
-
 public final class Even {
-    public String question;
-    public String answer;
+
+    private String question;
+    private String answer;
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
 
 
-    public String generateQA() {
+    public void generateQA() {
         var num = 0;
-        var decRandom = 100;
+        final var decRandom = 100;
 
         num = (int) Math.round(Math.random() * decRandom);
         this.question = String.valueOf(num);
@@ -20,12 +26,8 @@ public final class Even {
         } else {
             this.answer = "no";
         }
-        return this.question;
     }
 
-    public boolean checkCorrectAnswer(String answer) {
-        return (Objects.equals(this.answer, answer.toLowerCase()));
-    }
 
 }
 

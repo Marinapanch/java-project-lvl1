@@ -1,14 +1,17 @@
 package hexlet.code;
 
-import hexlet.code.games.Even;
-
 import java.util.Scanner;
 
 import static hexlet.code.Cli.makeGreeting;
-import static hexlet.code.Cli.makeGreetingWithName;
 
 public class App {
     public static void main(String[] args) {
+
+        final var indexGreet = 1;
+        final var indexEven = 2;
+        final var indexCalc = 3;
+        final var indexExit = 0;
+
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
@@ -21,14 +24,14 @@ public class App {
 
         int index = sc.nextInt();
         switch (index) {
-            case 1 :
+            case indexGreet :
                 makeGreeting();
                 break;
-            case 2 :
-            case 3 :
+            case indexEven :
+            case indexCalc :
                 hexlet.code.Engine.engineGame(index);
                 break;
-            case 0 :
+            case indexExit :
                 break;
             default : break;
         }
