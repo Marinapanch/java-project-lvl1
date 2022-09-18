@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
 
 import java.util.Objects;
 import java.util.Scanner;
@@ -15,6 +16,7 @@ public class Engine {
         final var countRight = 3;
         final var indexEven = 2;
         final var indexCalc = 3;
+        final var indexGCD = 4;
 
         var isCorrect = true;
 
@@ -38,6 +40,13 @@ public class Engine {
                     question = gameC.getQuestion();
                     rightAnswer = gameC.getAnswer();
                     System.out.println("What is the result of the expression?");
+                    break;
+                case indexGCD:
+                    GCD gameGCD = new GCD();
+                    gameGCD.generateQA();
+                    question = gameGCD.getQuestion();
+                    rightAnswer = gameGCD.getAnswer();
+                    System.out.println("Find the greatest common divisor of given numbers.");
                     break;
                 default: break;
             }
