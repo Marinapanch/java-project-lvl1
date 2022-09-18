@@ -9,3 +9,5 @@ step 6: https://asciinema.org/a/522116
 
 step 7: https://asciinema.org/a/522119
 
+step 8: https://asciinema.org/a/522127
+
