@@ -4,6 +4,7 @@ import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 import java.util.Objects;
 import java.util.Scanner;
@@ -20,6 +21,7 @@ public class Engine {
         final var indexCalc = 3;
         final var indexGCD = 4;
         final var indexProgression = 5;
+        final var indexPrime = 6;
 
         var isCorrect = true;
 
@@ -58,22 +60,15 @@ public class Engine {
                     rightAnswer = gameProgression.getAnswer();
                     System.out.println("What number is missing in the progression?");
                     break;
+                case indexPrime:
+                    Prime gamePrime = new Prime();
+                    gamePrime.generateQA();
+                    question = gamePrime.getQuestion();
+                    rightAnswer = gamePrime.getAnswer();
+                    System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+                    break;
                 default: break;
             }
-     /*       if (index == 2) {
-                Even game = new Even();
-                game.generateQA();
-                question = game.question;
-                rightAnswer = game.answer;
-                System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
-            }
-            if (index == 3) {
-                Calc game = new Calc();
-                game.generateQA();
-                question = game.question;
-                rightAnswer = game.answer;
-                System.out.println("What is the result of the expression?");
-            } */
 
             System.out.println("Question: " + question);
             System.out.print("Answer: ");

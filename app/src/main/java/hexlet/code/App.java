@@ -12,6 +12,7 @@ public class App {
         final var indexCalc = 3;
         final var indexGCD = 4;
         final var indexProgression = 5;
+        final var indexPrime = 6;
         final var indexExit = 0;
 
         System.out.println("Please enter the game number and press Enter.");
@@ -20,6 +21,7 @@ public class App {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
@@ -35,6 +37,7 @@ public class App {
             case indexCalc :
             case indexGCD :
             case indexProgression:
+            case indexPrime:
                 hexlet.code.Engine.engineGame(index);
                 break;
             case indexExit :
