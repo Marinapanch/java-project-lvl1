@@ -13,7 +13,7 @@ public final class Prime {
     }
 
     public void generateQA() {
-        
+
         final var decRandom = 100;
         var seq = "";
 
